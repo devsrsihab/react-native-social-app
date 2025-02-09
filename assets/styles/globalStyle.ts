@@ -42,6 +42,15 @@ const globalStyle = StyleSheet.create({
     color: 'white',
     fontSize: 8,
   },
+
+  // user stories
+  userStoriesContainer: {
+    flexDirection: 'row',
+
+    alignItems: 'center',
+    marginTop: 20,
+    marginHorizontal: 28,
+  },
 });
 
 export default globalStyle;

@@ -10,6 +10,7 @@ import {
   faComment,
   faHeart,
 } from '@fortawesome/free-regular-svg-icons';
+import {horizontalScall} from '../../assets/styles/scaling';
 
 const UserPost = ({
   firstName,
@@ -26,7 +27,7 @@ const UserPost = ({
       {/* post header */}
       <View style={userPostStyle.userPostHeader}>
         <View style={userPostStyle.userPostHeaderWithProfile}>
-          <UserProfile image={profileImage} dimentions={48} />
+          <UserProfile image={profileImage} dimentions={horizontalScall(48)} />
           <View>
             <Text style={userPostStyle.userNames}>
               {firstName} {lastName}
@@ -39,7 +40,7 @@ const UserPost = ({
 
       {/* post body */}
       <View style={userPostStyle.userPostBody}>
-        <Image source={image} />
+        <Image style={userPostStyle.userPostImage} source={image} />
       </View>
       {/* post footer */}
       <View style={userPostStyle.userPostFooter}>

@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import getFontFamily from '../assets/fonts/getFontFamily';
+import {horizontalScall, scaleFontSize} from '../assets/styles/scaling';
 
 const BaseComponent = () => {
   return (
@@ -18,10 +19,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 12,
+    padding: horizontalScall(12),
   },
   baseText: {
-    fontSize: 43,
+    fontSize: scaleFontSize(43),
     color: 'red',
     fontFamily: getFontFamily('Inter', '900'),
   },

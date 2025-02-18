@@ -14,6 +14,7 @@ import globalStyle from './assets/styles/globalStyle';
 import UserStory from './components/UserStory/UserStory';
 import {TUserPost} from './schema';
 import UserPost from './components/UserPost/UserPost';
+import {scaleFontSize} from './assets/styles/scaling';
 
 type UserProfile = {
   firstName: string;
@@ -147,7 +148,7 @@ const App: React.FC = (): React.JSX.Element => {
                     <FontAwesomeIcon
                       icon={faEnvelope}
                       color="#CACDDE"
-                      size={25}
+                      size={scaleFontSize(25)}
                     />
                     <View style={globalStyle.messageNumberWrapper}>
                       <Text style={globalStyle.messageNumber}>5</Text>
@@ -171,6 +172,7 @@ const App: React.FC = (): React.JSX.Element => {
         data={userPosts}
         renderItem={({item}) => (
           <View style={globalStyle.userPostsContainer}>
+            {/* user post */}
             <UserPost key={item.id} {...item} />
           </View>
         )}

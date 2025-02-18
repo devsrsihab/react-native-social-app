@@ -1,15 +1,20 @@
 import {StyleSheet} from 'react-native';
 import getFontFamily from '../../assets/fonts/getFontFamily';
+import {
+  horizontalScall,
+  scaleFontSize,
+  verticalScall,
+} from '../../assets/styles/scaling';
 
 const userPostStyle = StyleSheet.create({
   userPostWrapper: {
-    marginVertical: 20,
+    marginVertical: verticalScall(20),
     borderBottomWidth: 1,
     borderColor: '#EFF2F6',
   },
   userPostHeaderWithProfile: {
     flexDirection: 'row',
-    gap: 10,
+    gap: horizontalScall(10),
     alignItems: 'center',
   },
   userPostHeader: {
@@ -18,29 +23,33 @@ const userPostStyle = StyleSheet.create({
     alignItems: 'center',
   },
   userPostBody: {
-    marginTop: 16,
-    height: 220,
+    marginTop: verticalScall(16),
+    height: horizontalScall(220),
+  },
+  userPostImage: {
+    height: '100%',
+    maxWidth: '100%',
   },
   userNames: {
-    fontSize: 16,
+    fontSize: scaleFontSize(16),
     fontFamily: getFontFamily('Inter', '500'),
   },
   userLocation: {
-    fontSize: 12,
+    fontSize: scaleFontSize(12),
     fontFamily: getFontFamily('Inter', '400'),
     color: '#79869F',
-    marginTop: 5,
+    marginTop: verticalScall(5),
   },
   userPostFooter: {
     flexDirection: 'row',
-    gap: 27,
+    gap: horizontalScall(27),
     alignItems: 'center',
-    marginTop: 20,
-    marginLeft: 10,
+    marginTop: verticalScall(20),
+    marginLeft: horizontalScall(10),
   },
   userPostFooterIcons: {
     flexDirection: 'row',
-    gap: 7,
+    gap: horizontalScall(7),
     alignItems: 'center',
   },
 });

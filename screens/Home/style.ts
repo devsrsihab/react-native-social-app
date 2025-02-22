@@ -1,16 +1,11 @@
 import {StyleSheet} from 'react-native';
-import {horizontalScall, scaleFontSize, verticalScall} from './scaling';
+import {
+  horizontalScall,
+  scaleFontSize,
+  verticalScall,
+} from '../../assets/styles/scaling';
 
-const globalStyle = StyleSheet.create({
-  bgWhite: {
-    backgroundColor: '#fff',
-  },
-  flexGrow: {
-    flexGrow: 1,
-  },
-  flex: {
-    flex: 1,
-  },
+const homeStyle = StyleSheet.create({
   header: {
     marginTop: verticalScall(25),
     marginRight: horizontalScall(17),
@@ -69,4 +64,4 @@ const globalStyle = StyleSheet.create({
   },
 });
 
-export default globalStyle;
+export default homeStyle;
